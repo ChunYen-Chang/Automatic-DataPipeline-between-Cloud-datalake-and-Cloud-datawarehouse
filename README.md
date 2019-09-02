@@ -1,4 +1,7 @@
-![](https://upload.cc/i1/2019/08/25/NLJ1Y0.jpg)
+<p align="center">
+  <img width="570" height="240" src="https://upload.cc/i1/2019/08/25/NLJ1Y0.jpg">
+</p>
+
 # Automation Data Pipeline for Sparkify (By using Airflow)
 ---
 #### PROJECT BACKGROUND AND SUMMARY
