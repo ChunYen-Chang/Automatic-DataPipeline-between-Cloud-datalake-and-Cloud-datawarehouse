@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="570" height="240" src="https://upload.cc/i1/2019/08/25/NLJ1Y0.jpg">
+  <img width="570" height="240" src="https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/logo.jpg">
 </p>
 
 # Automation Data Pipeline for Sparkify (By using Airflow)
@@ -15,7 +15,7 @@ This project aims for creating an automation ETL data pipeline which can extract
 
 ##### *DATA PIPELINE DETAILS*
 - **DAG for this project**
-![](https://upload.cc/i1/2019/08/25/Bxmb1L.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/DAG.jpg)
 - **Explanation for each task in DAG**  
     1. **Begin_execution**: the start of the data pipeline.  
     2. **Stage_events**: Create Stage_events table in Redshift, load events json data from S3 and save the data into Stage_event table  
@@ -40,7 +40,7 @@ This project aims for creating an automation ETL data pipeline which can extract
 #
 ##### *DATA MODELING*
 - **Data modeling for this project**
-![](https://upload.cc/i1/2019/08/25/gM9qd6.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/datamodel.jpg)
 - **Explanation for each table**  
     1. **songplays table (fact table)**: contain data associated with song plays. The column in this table are songplay_id, start_time, user_id, song_id, artist_id, session_id, location, user_agent
     2. **users Tables (dimensional table)**: contain data associated with users. The column in this table are user_id, first_name, last_name, gender, level
@@ -73,22 +73,22 @@ This project aims for creating an automation ETL data pipeline which can extract
 
 3. configure AWS credentials (it allows us to access to AWS account)
 3-1. Admin > Connections
-![](https://upload.cc/i1/2019/08/25/2E09wD.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/1.jpg)
 3-2. Click Create
-![](https://upload.cc/i1/2019/08/25/gnTWFa.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/2.jpg)
 3-3. type **AWS access key id** and **secret access key**
-![](https://upload.cc/i1/2019/08/25/zZGfJp.jpg)  
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/3.jpg)  
 
 4. configure Redshift connection
 4-1. Admin > Connections
-![](https://upload.cc/i1/2019/08/25/2E09wD.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/1.jpg)
 4-2. Click Create
-![](https://upload.cc/i1/2019/08/25/gnTWFa.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/2.jpg)
 4-3. type Redshift information in these columns
-![](https://upload.cc/i1/2019/08/25/GdB8ge.jpg)  
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/4.jpg)  
 
 5. start the data pipeline
-![](https://upload.cc/i1/2019/08/25/E4SCQc.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/5.jpg)
 
 6. monitor the data pipeline
-![](https://upload.cc/i1/2019/08/25/5XLglh.jpg)
+![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/6.jpg)
