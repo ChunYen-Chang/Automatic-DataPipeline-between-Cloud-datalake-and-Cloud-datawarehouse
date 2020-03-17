@@ -2,7 +2,7 @@
   <img width="570" height="240" src="https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/logo.jpg">
 </p>
 
-# Automation Data Pipeline for Sparkify (By using Airflow)
+# Automatic DataPipeline between Cloud Data Lake and Cloud Data Warehouse
 ---
 #### PROJECT BACKGROUND AND SUMMARY
 #
