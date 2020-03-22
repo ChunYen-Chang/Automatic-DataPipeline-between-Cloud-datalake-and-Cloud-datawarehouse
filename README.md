@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="570" height="240" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/logo.jpg">
+  <img width="700" height="370" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/project_logo.jpg">
 </p>
 
 # Automatic DataPipeline between Cloud Data Lake and Cloud Data Warehouse
