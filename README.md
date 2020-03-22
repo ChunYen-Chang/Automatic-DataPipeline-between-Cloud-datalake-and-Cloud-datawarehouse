@@ -3,7 +3,6 @@
 </p>
 
 # Automatic DataPipeline between Cloud Data Lake and Cloud Data Warehouse
-------------
 ### *PROJECT BACKGROUND AND GOAL*
 - #### BACKGROUND
     A startup company recently moves its data storage and data processing server to AWS cloud data lake (AWS S3) and AWS cloud data processing cluster (AWS spark cluster). The introduction of AWS cloud services improves this company's data storage and data processing ability. Now, this company wants more. There are two things this company wants to achieve in this project.
@@ -22,7 +21,9 @@
     It allows the data analysis team to use SQL query to check or analyze the data in the data lake.
 
 <br>
+
 ------------
+
 ### *SYSTEM ARCHITECTURE*
 <p align="center">
   <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture_new_v2.jpeg">
