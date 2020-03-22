@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="570" height="240" src="https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/logo.jpg">
+  <img width="570" height="240" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/logo.jpg">
 </p>
 
 # Automatic DataPipeline between Cloud Data Lake and Cloud Data Warehouse
@@ -12,10 +12,14 @@ A music streaming company, Sparkify, has grown their business quickly for the pa
 ##### *PROJECT DESCRIPTION*
 This project aims for creating an automation ETL data pipeline which can extract users' data (which in JSON format) from AWS S3, process the data, save the data in Fact table and Dimensional tables in AWS Redshift, and check the data quality on each dimensional table. In this project, we decide to use **Apache Airflow** as it provides user friendly webUI for us to operate the automation ETL data pipeline and monitor the data pipeline.
 
+#### SYSTEM ARCHITECTURE
+<p align="center">
+  <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture.jpeg">
+</p>
 
 ##### *DATA PIPELINE DETAILS*
 - **DAG for this project**
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/DAG.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/DAG.jpg)
 - **Explanation for each task in DAG**  
     1. **Begin_execution**: the start of the data pipeline.  
     2. **Stage_events**: Create Stage_events table in Redshift, load events json data from S3 and save the data into Stage_event table  
@@ -40,7 +44,7 @@ This project aims for creating an automation ETL data pipeline which can extract
 #
 ##### *DATA MODELING*
 - **Data modeling for this project**
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/datamodel.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/datamodel.jpg)
 - **Explanation for each table**  
     1. **songplays table (fact table)**: contain data associated with song plays. The column in this table are songplay_id, start_time, user_id, song_id, artist_id, session_id, location, user_agent
     2. **users Tables (dimensional table)**: contain data associated with users. The column in this table are user_id, first_name, last_name, gender, level
@@ -73,22 +77,22 @@ This project aims for creating an automation ETL data pipeline which can extract
 
 3. configure AWS credentials (it allows us to access to AWS account)
 3-1. Admin > Connections
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/1.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/1.jpg)
 3-2. Click Create
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/2.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/2.jpg)
 3-3. type **AWS access key id** and **secret access key**
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/3.jpg)  
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/3.jpg)  
 
 4. configure Redshift connection
 4-1. Admin > Connections
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/1.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/1.jpg)
 4-2. Click Create
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/2.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/2.jpg)
 4-3. type Redshift information in these columns
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/4.jpg)  
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/4.jpg)  
 
 5. start the data pipeline
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/5.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/5.jpg)
 
 6. monitor the data pipeline
-![](https://github.com/ChunYen-Chang/Automation-DataPipeline-Using-Airflow-AWSS3-AWSRedshift/blob/master/images/6.jpg)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/6.jpg)
