@@ -21,11 +21,11 @@ Second, use AWS serverless services, AWS Glue and AWS Athena, to build an immedi
 
     It allows the data analysis team to use SQL query to check or analyze the data in the data lake.
 
-
+<br>
 
 ### SYSTEM ARCHITECTURE
 <p align="center">
-  <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture_new.jpeg">
+  <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture_new_v2.jpeg">
 </p>
 
 ##### *DATA PIPELINE DETAILS*
