@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="700" height="370" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/project_logo.jpg">
+  <img width="730" height="370" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/project_logo.jpg">
 </p>
 
 # Automatic DataPipeline between Cloud Data Lake and Cloud Data Warehouse
@@ -14,7 +14,7 @@ This project aims for creating an automation ETL data pipeline which can extract
 
 #### SYSTEM ARCHITECTURE
 <p align="center">
-  <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture.jpeg">
+  <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture_new.jpeg">
 </p>
 
 ##### *DATA PIPELINE DETAILS*
