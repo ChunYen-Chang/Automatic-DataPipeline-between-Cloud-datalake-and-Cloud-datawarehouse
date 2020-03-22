@@ -3,26 +3,26 @@
 </p>
 
 # Automatic DataPipeline between Cloud Data Lake and Cloud Data Warehouse
-
+------------
 ### *PROJECT BACKGROUND AND GOAL*
-- #### *BACKGROUND*
+- #### BACKGROUND
     A startup company recently moves its data storage and data processing server to AWS cloud data lake (AWS S3) and AWS cloud data processing cluster (AWS spark cluster). The introduction of AWS cloud services improves this company's data storage and data processing ability. Now, this company wants more. There are two things this company wants to achieve in this project.
 
     First, use AWS Redshift to build a cloud data warehouse. In the past, it is hard for other departments to access the user data or the song data which is collected by this company. If the data can be shared by other departments, it may benefit this company's business. Thus, this company decides to set up a cloud data warehouse that stores clean and structured data. By having this cloud data warehouse, other departments can easily access the data and use the data to improve this company's business.
 
     Second, use AWS serverless services, AWS Glue and AWS Athena, to build an immediate data searching and analysis service for data analysis team.** As in the early days, the data analysis team only can check the data or conduct data analysis tasks when data arrives in the database or data warehouse. It is hard for them to check the data or conduct the data analysis when data just arrives at the data lake. If the data analysis team can check the data or conduct the data analysis when data just arrives, it may find some valuable points and these points help data engineers to improve the data pipeline. Therefore, this company considers introducing AWS Glue and AWS Athena to create an immediate data searching and analysis service which allows the data analysis team to use SQL queries to check or analyze the data in the data lake.
 
-- #### *PROJECT GOAL*
-1. **Launch a cloud data warehouse by using AWS Redshift :** 
+- #### PROJECT GOAL
+1. Launch a cloud data warehouse by using AWS Redshift : 
 
     Considering the query efficiency in the cloud data warehouse, we decide to use star schema to store our data. And, we build an automatic data pipeline between cloud data lake (AWS S3) and cloud data warehouse (AWS Redshift) by using Apache Airflow. This data pipeline automatically extracts data from the cloud data lake, clean the data, dump data in a stage table in Redshift, execute the data quality check, and store data in the final table in Cloud data lake with a star schema. This automatic data pipeline helps engineers to reduce the burden of executing and maintaining the ETL data pipeline manually.
 
-2. **Build an immediate data searching and analysis service :** 
+2. Build an immediate data searching and analysis service :
 
     It allows the data analysis team to use SQL query to check or analyze the data in the data lake.
 
 <br>
-
+------------
 ### *SYSTEM ARCHITECTURE*
 <p align="center">
   <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture_new_v2.jpeg">
@@ -30,13 +30,10 @@
 
 <br>
 
-### *DATA PIPELINE DETAILS*
-- #### *Airflow DAG*
+### DATA PIPELINE DETAILS
+- #### Airflow DAG
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/DAG.jpg)
-
-<br>
-
-- #### *Each DAG Task Explanation*
+- #### Each DAG Task Explanation
 1. **Begin_execution :** 
     Start the data pipeline.  
     
@@ -73,29 +70,27 @@
 12. **Data_quality_checks_artists :** 
     Check how many rows in artist table, if it is less than 1, raise an error.  
 
+<br>
 
 ### *DATA MODELING*
 - #### *Star Schema*
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/datamodel.jpg)
 
 ------------
-#### FILES IN THE REPOSITORY
-**dags folder**: It contains files which relates to DAG.
-1. **Sparkify_datapipeline_dag.py**: a python script which is used for defining the DAG
+### *FILES IN THE REPOSITORY*
+1. **README.md**: An introduction to this project
 
-**plugins folder**: It contains two folders, helpers and operators.  
-----**helpers folder**: 
-1. **sql_queries.py**: a python script which defines the SQL command that will be used in this project. The operators folder has four
+2. **image directory**: A directory for keeping images for this project
 
-----**operators folder**: 
-1. **data_quality.py**: a python script which defines DataQualityOperator
-2. **load_dimension.py**: a python script which defines LoadDimensionOperator
-3. **load_fact.py**: a python script which defines LoadFactOperator
-4. **stage_redshift.py**: a python script which defines StageToRedshiftOperator
-
+3. **airflow directory**: A directory for keeping all scripts
+    - **dags folder**: contain the python script which is executed by Apache Airflow
+        - **Sparkify_datapipeline_dag.py**: a python script which is used for defining the DAG
+    - **plugins folder**: contain functions are used by Sparkify_datapipeline_dag.py
+        - **helpers folder**: contain the python script of sql_queries function
+        - **operators folder**: contain the python script about each operator used in Sparkify_datapipeline_dag.py
 
 ------------
-#### HOW TO RUN THE PROJECT
+### *HOW TO RUN THE PROJECT*
 **The step of running the project is listed below.**
 1. change directory to the folder you install your airflow. Then, find start.sh file. In this project, the start.sh file is located on **/opt/airflow/start.sh**. Thus, we type `/opt/airflow/start.sh` in our terminal to launch the Airflow server.
 
