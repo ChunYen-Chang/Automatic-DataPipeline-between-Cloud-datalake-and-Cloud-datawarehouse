@@ -23,7 +23,7 @@ class StageToRedshiftOperator(BaseOperator):
         region 'us-west-2'
         BLANKSASNULL 
         EMPTYASNULL
-        FORMAT AS JSON 'auto'
+        FORMAT AS PARQUET
     """
     
     # define the sql command of copying **event** files from S3 to AWS redshift
@@ -35,7 +35,7 @@ class StageToRedshiftOperator(BaseOperator):
         region 'us-west-2'
         BLANKSASNULL
         EMPTYASNULL
-        FORMAT AS JSON 's3://udacity-dend/log_json_path.json'
+        FORMAT AS PARQUET
     """
  
     # define parameters
