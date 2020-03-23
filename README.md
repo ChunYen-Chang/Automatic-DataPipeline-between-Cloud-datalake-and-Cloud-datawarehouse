@@ -85,7 +85,7 @@
 
 3. **airflow directory**: A directory for keeping all scripts
     - **dags folder**: contain the python script which is executed by Apache Airflow
-        - **Sparkify_datapipeline_dag.py**: a python script which is used for defining the DAG
+        - **datapipeline_between_s3_redshift.py**: a python script which is used for defining the DAG
     - **plugins folder**: contain functions are used by Sparkify_datapipeline_dag.py
         - **helpers folder**: contain the python script of sql_queries function
         - **operators folder**: contain the python script about each operator used in Sparkify_datapipeline_dag.py
