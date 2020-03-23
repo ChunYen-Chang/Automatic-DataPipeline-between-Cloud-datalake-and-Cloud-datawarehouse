@@ -91,8 +91,10 @@
         - **operators folder**: contain the python script about each operator used in Sparkify_datapipeline_dag.py
 
 ------------
-### *HOW TO RUN THE PROJECT*
-**The step of running the project is listed below.**
+### *HOW TO EXECUTE THE PROJECT*
+The project has two parts. The first part is executing the automatic data pipeline by airflow. The second part is setting up serverless AWS services, AWS glue and AWS Athena.
+
+**PART ONE: Execute the automatic data pipeline by airflow.**
 1. change directory to the folder you install your airflow. Then, find start.sh file. In this project, the start.sh file is located on **/opt/airflow/start.sh**. Thus, we type `/opt/airflow/start.sh` in our terminal to launch the Airflow server.
 
 2. access to Airflow webUI. Generally speaking, you can access to the webUI through this address **http://localhost:8080**
@@ -118,3 +120,58 @@
 
 6. monitor the data pipeline
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/6.jpg)
+
+<br>
+
+**PART TWO: Set up serverless AWS services, AWS glue and AWS Athena.**
+1. Find AWS Glue in AWS web dashboard
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_01.png)
+
+2. Click Add tables using a crawler
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_02.png)
+
+3. Give a crawler name
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_03.png)
+
+4. Tell this crawler the source type
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_04.png)
+
+5. Choose a data directory, crawler will go there and get the metadata 
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_05.png)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_06.png)
+
+6. Click Next
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_07.png)
+
+7. Choose No, then, Click Next
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_08.png)
+
+8. Choose IAM role
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_09.png)
+
+9. Create a scheduler for this crawler, choose run on demane
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_10.png)
+
+10. Define the output, in this example, the metadata will be in startup_sond DB
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_11.png)
+
+11. Review all settings, and Finish
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_12.png)
+
+12. Click Run Crawler
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_13.png)
+
+13. Wait for the task
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_14.png)
+
+14. Now, Crawler finished its job, and the meta data is in DB, and we have a table.
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/glue_15.png)
+
+15. Go to AWS web dashboard, find AWS Athena service
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/athena_01.png)
+
+16. Click settings, and type the S3 directory you want to save the query result
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/athena_03.png)
+
+17. Typr SQL query, and you can search and filter the data store in AWS S3
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/athena_03.png)
