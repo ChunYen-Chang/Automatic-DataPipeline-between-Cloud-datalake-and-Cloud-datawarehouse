@@ -12,11 +12,11 @@
     Second, use AWS serverless services, AWS Glue and AWS Athena, to build an immediate data searching and analysis service for data analysis team.** As in the early days, the data analysis team only can check the data or conduct data analysis tasks when data arrives in the database or data warehouse. It is hard for them to check the data or conduct the data analysis when data just arrives at the data lake. If the data analysis team can check the data or conduct the data analysis when data just arrives, it may find some valuable points and these points help data engineers to improve the data pipeline. Therefore, this company considers introducing AWS Glue and AWS Athena to create an immediate data searching and analysis service which allows the data analysis team to use SQL queries to check or analyze the data in the data lake.
 
 - #### PROJECT GOAL
-1. Launch a cloud data warehouse by using AWS Redshift : 
+1. *Launch a cloud data warehouse by using AWS Redshift :* 
 
     Considering the query efficiency in the cloud data warehouse, we decide to use star schema to store our data. And, we build an automatic data pipeline between cloud data lake (AWS S3) and cloud data warehouse (AWS Redshift) by using Apache Airflow. This data pipeline automatically extracts data from the cloud data lake, clean the data, dump data in a stage table in Redshift, execute the data quality check, and store data in the final table in Cloud data lake with a star schema. This automatic data pipeline helps engineers to reduce the burden of executing and maintaining the ETL data pipeline manually.
 
-2. Build an immediate data searching and analysis service :
+2. *Build an immediate data searching and analysis service :*
 
     It allows the data analysis team to use SQL query to check or analyze the data in the data lake.
 
@@ -26,7 +26,7 @@
 
 ### *SYSTEM ARCHITECTURE*
 <p align="center">
-  <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture_new_v2.jpeg">
+  <img width="850" height="550" src="https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/system_architecture_new.jpeg">
 </p>
 
 <br>
@@ -102,16 +102,20 @@ The project has two parts. The first part is executing the automatic data pipeli
 3. configure AWS credentials (it allows us to access to AWS account)
 3-1. Admin > Connections
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/1.jpg)
+
 3-2. Click Create
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/2.jpg)
+
 3-3. type **AWS access key id** and **secret access key**
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/3.jpg)  
 
 4. configure Redshift connection
 4-1. Admin > Connections
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/1.jpg)
+
 4-2. Click Create
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/2.jpg)
+
 4-3. type Redshift information in these columns
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/4.jpg)  
 
