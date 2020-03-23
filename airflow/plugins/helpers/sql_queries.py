@@ -1,6 +1,6 @@
 class SqlQueries:
     """
-    Description: This class includes the necessary SQL command for Sparkify_datapipeline DAG. 
+    Description: This class includes the necessary SQL command for datapipeline_s3_redshift DAG. 
                  The SQL commands which are included in this class are listed below.
                  1. staging_events_table_create
                  2. staging_songs_table_create
