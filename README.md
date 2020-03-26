@@ -178,4 +178,4 @@ The project has two parts. The first part is executing the automatic data pipeli
 ![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/athena_03.png)
 
 17. Typr SQL query, and you can search and filter the data store in AWS S3
-![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/athena_03.png)
+![](https://github.com/ChunYen-Chang/Automatic-DataPipeline-between-Cloud-datalake-and-Cloud-datawarehouse/blob/master/images/athena_04.png)
